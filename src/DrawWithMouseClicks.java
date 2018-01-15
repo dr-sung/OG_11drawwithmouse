@@ -1,4 +1,5 @@
 
+import java.awt.BorderLayout;
 import java.awt.Container;
 import java.awt.Shape;
 import java.awt.event.ActionEvent;
@@ -34,7 +35,7 @@ public class DrawWithMouseClicks extends JFrame {
         panel = new DrawPanel(shapes); // Use JPanel for drawing canvas
         panel.addMouseListener(new MouseObserver());
         Container contentPane = getContentPane();
-        contentPane.add(panel, "Center");
+        contentPane.add(panel, BorderLayout.CENTER);
 
         widthField = new JTextField("10", 5);
         heightField = new JTextField("10", 5);
